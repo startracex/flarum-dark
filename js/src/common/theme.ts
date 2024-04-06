@@ -6,9 +6,13 @@ export enum Theme {
 
 export const storageKey = 'Theme';
 
-const themeValues = Object.values(Theme);
+const themeValues: Theme[] = Object.values(Theme);
 
-export const nextTheme = (theme?: Theme) => {
+/**
+ * Loop through the themes.
+ * Auto -> Light -> Dark -> Auto.
+ */
+export const nextTheme: (theme?: Theme) => Theme = (theme?: Theme) => {
   if (!theme) {
     return Theme.LIGHT;
   }
