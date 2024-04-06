@@ -1,0 +1,57 @@
+{
+    "name": "startracex/flarum-dark",
+    "description": "Dark extension",
+    "keywords": [
+        "flarum",
+        "extension",
+        "dark",
+        "night",
+        "mode",
+        "option"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "startracex"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.8.0",
+        "fof/extend": "^1.0.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Dark",
+            "icon": {
+                "name": "fa fa-moon",
+                "backgroundColor": "#000000",
+                "color": "#ffffff"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Startracex\\FlarumDark\\": "src/"
+        },
+        "files": [
+            "src/Overrides/Forum/ValidateCustomLess.php",
+            "src/Overrides/Frontend/Assets.php",
+            "src/Overrides/Frontend/RecompileFrontendAssets.php"
+        ]
+    },
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis"
+    },
+    "require-dev": {
+        "flarum/phpstan": "*"
+    }
+}
