@@ -45,7 +45,7 @@
         ]
     },
     "scripts": {
-        "analyse:phpstan": "phpstan analyse",
+        "analyse:phpstan": "phpstan analyse ./src ./extend.php",
         "clear-cache:phpstan": "phpstan clear-result-cache"
     },
     "scripts-descriptions": {
