@@ -1,0 +1,52 @@
+name: Frontend
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: curl, dom, gd, json, mbstring, openssl, pdo_mysql, tokenizer, zip
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        run: composer install
+        working-directory: .
+
+      - name: Install JS dependencies
+        run: pnpm install
+        working-directory: ./js
+
+      - name: JS Checks & Production Build
+        uses: flarum/action-build@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          build_script: build # default
+          format_script: format-check # default
+          build_typings_script: type
+          package_manager: pnpm
+          js_path: ./js # default
+          do_not_commit: false #default
