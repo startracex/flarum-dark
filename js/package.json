@@ -12,7 +12,8 @@
     "scripts": {
         "dev": "webpack --mode development --watch",
         "build": "webpack --mode production",
-        "type": "tsc",
+        "build:ci": "node ./scripts/keep-dist.cjs && webpack --mode production",
+        "build:type": "tsc",
         "format": "prettier --write src",
         "format-check": "prettier --check src"
     },

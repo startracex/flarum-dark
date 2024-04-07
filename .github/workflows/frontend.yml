@@ -44,9 +44,10 @@ jobs:
         uses: flarum/action-build@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          build_script: build # default
+          build_script: build:ci
           format_script: format-check # default
-          build_typings_script: type
+          build_typings_script: build:type
           package_manager: pnpm
           js_path: ./js # default
-          do_not_commit: false #default
+          do_not_commit: false # default
+          commit_all_dirty: false # default
