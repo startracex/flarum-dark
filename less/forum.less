@@ -1,0 +1,27 @@
+:root {
+    & when (@config-dark-mode = true) {
+        --color-scheme: dark;
+    }
+
+    & when (@config-dark-mode = false) {
+        --color-scheme: light;
+    }
+}
+
+.Header-secondary {
+    .item-theme {
+        .Button-label {
+            margin-left: 7px;
+        }
+        @media (min-width: @screen-tablet) {
+            .Button-label {
+                display: none;
+            }
+
+            .Button-icon {
+                margin-right: 0;
+            }
+        }
+    }
+
+}
