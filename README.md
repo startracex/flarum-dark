@@ -1,4 +1,4 @@
-# Flarum Dark
+# Dark
 
 ![License](https://img.shields.io/badge/license-MIT-black.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/startracex/flarum-dark.svg)](https://packagist.org/packages/startracex/flarum-dark) [![Total Downloads](https://img.shields.io/packagist/dt/startracex/flarum-dark.svg)](https://packagist.org/packages/startracex/flarum-dark)
 
