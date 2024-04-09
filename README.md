@@ -4,6 +4,10 @@
 
 A [Flarum](http://flarum.org) extension.
 
+It will display a theme button on the left side of the session or sign up.
+
+Rotate when clicking: Automatic (default), Light, Dark.
+
 ## Installation
 
 Install with composer:
