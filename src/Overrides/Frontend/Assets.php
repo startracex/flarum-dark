@@ -139,7 +139,7 @@ class Assets
     // ++++++
     public function makeDarkCss(): LessCompiler
     {
-        $compiler = $this->makeLessCompiler($this->name.'--dark.css');
+        $compiler = $this->makeLessCompiler($this->name.'-dark.css');
 
         $this->populate($compiler, 'css', null, function (SourceCollector $sources) {
             $sources->addString(function () {
