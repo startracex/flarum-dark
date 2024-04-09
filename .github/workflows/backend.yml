@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'src/**'
+      - 'extend.php'
+      - 'composer.json'
 
 jobs:
   run:
@@ -11,5 +15,4 @@ jobs:
     with:
       enable_backend_testing: false
       enable_phpstan: true
-
       backend_directory: .
