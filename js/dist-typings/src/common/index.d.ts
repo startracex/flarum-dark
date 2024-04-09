@@ -30,6 +30,5 @@ export declare const setStyle: (t: Theme) => void;
  * Update page theme to t, save to localStorage and dispatch event.
  * @param t Theme
  * @param user session user (if exists).
- * @returns undefined.
  */
 export declare const updateTheme: (t: Theme, user?: User | null) => void;
