@@ -79,7 +79,6 @@ export const setStyle = (t: Theme) => {
  * Update page theme to t, save to localStorage and dispatch event.
  * @param t Theme
  * @param user session user (if exists).
- * @returns undefined.
  */
 export const updateTheme = (t: Theme, user?: User | null) => {
   localStorage.setItem(storageKey, t);
@@ -92,7 +91,7 @@ export const updateTheme = (t: Theme, user?: User | null) => {
       .then(() => {
         setStyle(t);
       });
-    return;
+  } else {
+    setStyle(t);
   }
-  setStyle(t);
 };
