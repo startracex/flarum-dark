@@ -21,6 +21,9 @@
         "flarum/core": "^1.8.0",
         "fof/extend": "^1.0.0"
     },
+    "replace": {
+        "fof/nightmode": "*"
+    },
     "extra": {
         "flarum-extension": {
             "title": "Dark",
