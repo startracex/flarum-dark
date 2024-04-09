@@ -28,7 +28,7 @@ const headerIcon = () => {
       >
         {label}
       </Button>,
-      11
+      user ? 10 /* Left of session */ : 11 /* Left of sign up */
     );
   });
 };
